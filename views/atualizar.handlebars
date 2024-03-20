@@ -1,0 +1,118 @@
+<div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col">
+
+      <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">SISTEMA WEB</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+              >Cadastrar</a>
+              <a class="nav-link" href="/consultar">Consutar</a>
+              <a class="nav-link" href="/cadastrar">Atualizar</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <div class="container text-start">
+          <h2>Aualizar - Agendamento de Potenciais Clientes</h2>
+          <p>Sistema utilizadado para agendamento de serviços</p>
+        </div>
+        <form action="atualizar/salvar" method="POST">
+
+          <div class="form-floating mb-3">
+            <input
+              name="nome"
+              type="text"
+              class="form-control"
+              id="floatingInput"
+              placeholder="Digite seu nome completo"
+            />
+            <label for="floatingInput">Nome</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input
+              name="telefone"
+              type="tel"
+              class="form-control"
+              id="floatingInput"
+              placeholder="(00)00000-00000"
+            />
+            <label for="floatingInput">Telefone</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              name="origem"
+            >
+              <option selected value="celular">Celular</option>
+              <option value="Fixo">Fixo</option>
+            </select>
+            <label for="floatingInput">Origem</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input
+              name="data"
+              type="date"
+              class="form-control"
+              id="floatingInput"
+              placeholder="00000-000"
+            />
+            <label for="floatingInput">Data do Contato</label>
+          </div>
+
+          <div class="form-floating">
+            <textarea
+              name="observacao"
+              class="form-control"
+              placeholder="Digite a observação"
+              id="floatingTextarea"
+              style="height: 100px"
+            ></textarea>
+
+            <label for="floatingTextarea">Observação</label>
+          </div>
+          <div
+            style="margin-top: 20px;"
+            class="d-flex flex-row bd-highlight mb-3"
+          >
+            <input
+              class="btn btn-outline-primary"
+              type="submit"
+              value="Atualizar"
+            />
+            <input
+              class="btn btn-outline-dark"
+              type="reset"
+              value="Apagar"
+              style="margin-left: 10px;"
+            />
+          </div>
+
+        </form>
+      </main>
+
+    </div>
+  </div>
+</div>
