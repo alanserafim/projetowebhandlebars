@@ -24,93 +24,107 @@
                 href="#"
               >Cadastrar</a>
               <a class="nav-link" href="/consultar">Consutar</a>
-              {{!-- <a class="nav-link" href="/cadastrar">Atualizar</a> --}}
             </div>
           </div>
         </div>
       </nav>
 
-      <main>
-        <div class="container text-start mt-3">
-          <h2>Cadastrar - Agendamento de Potenciais Clientes</h2>
-          <p>Sistema utilizado para agendamento de serviços.</p>
+      <main class="container">
+        <div class="row">
+          <div class="container text-start mt-3">
+            <h2>Cadastrar - Agendamento de Potenciais Clientes</h2>
+            <p>Sistema utilizado para agendamento de serviços.</p>
+          </div>
         </div>
-        <form action="/cadastrar" method="POST">
+        <div class="row align-items-center mt-3">
+          <div class="col">
 
-          <div class="form-floating mb-3">
-            <input
-              name="nome"
-              type="text"
-              class="form-control"
-              id="floatingInput"
-              placeholder="Digite seu nome completo"
+            <form action="/cadastrar" method="POST">
+
+              <div class="form-floating mb-3">
+                <input
+                  name="nome"
+                  type="text"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="Digite seu nome completo"
+                />
+                <label for="floatingInput">Nome</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input
+                  name="telefone"
+                  type="tel"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="(00)00000-00000"
+                />
+                <label for="floatingInput">Telefone</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  name="origem"
+                >
+                  <option selected value="celular">Celular</option>
+                  <option value="Fixo">Fixo</option>
+                </select>
+                <label for="floatingInput">Origem</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input
+                  name="data_contato"
+                  type="date"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="00000-000"
+                />
+                <label for="floatingInput">Data do Contato</label>
+              </div>
+
+              <div class="form-floating">
+                <textarea
+                  name="observacao"
+                  class="form-control"
+                  placeholder="Digite a observação"
+                  id="floatingTextarea"
+                  style="height: 100px"
+                ></textarea>
+
+                <label for="floatingTextarea">Observação</label>
+              </div>
+              <div
+                style="margin-top: 20px;"
+                class="d-flex flex-row bd-highlight mb-3"
+              >
+                <input
+                  class="btn btn-outline-primary"
+                  type="submit"
+                  value="Cadastrar"
+                />
+                <input
+                  class="btn btn-outline-dark"
+                  type="reset"
+                  value="Apagar"
+                  style="margin-left: 10px;"
+                />
+              </div>
+
+            </form>
+          </div>
+          {{!-- <div class="col">
+            <img
+              src="img/cadastro.svg"
+              class="img-fluid"
+              alt="..."
+              style="height: 400px;"
             />
-            <label for="floatingInput">Nome</label>
-          </div>
-
-          <div class="form-floating mb-3">
-            <input
-              name="telefone"
-              type="tel"
-              class="form-control"
-              id="floatingInput"
-              placeholder="(00)00000-00000"
-            />
-            <label for="floatingInput">Telefone</label>
-          </div>
-
-          <div class="form-floating mb-3">
-            <select
-              class="form-select"
-              aria-label="Default select example"
-              name="origem"
-            >
-              <option selected value="celular">Celular</option>
-              <option value="Fixo">Fixo</option>
-            </select>
-            <label for="floatingInput">Origem</label>
-          </div>
-
-          <div class="form-floating mb-3">
-            <input
-              name="data_contato"
-              type="date"
-              class="form-control"
-              id="floatingInput"
-              placeholder="00000-000"
-            />
-            <label for="floatingInput">Data do Contato</label>
-          </div>
-
-          <div class="form-floating">
-            <textarea
-              name="observacao"
-              class="form-control"
-              placeholder="Digite a observação"
-              id="floatingTextarea"
-              style="height: 100px"
-            ></textarea>
-
-            <label for="floatingTextarea">Observação</label>
-          </div>
-          <div
-            style="margin-top: 20px;"
-            class="d-flex flex-row bd-highlight mb-3"
-          >
-            <input
-              class="btn btn-outline-primary"
-              type="submit"
-              value="Cadastrar"
-            />
-            <input
-              class="btn btn-outline-dark"
-              type="reset"
-              value="Apagar"
-              style="margin-left: 10px;"
-            />
-          </div>
-
-        </form>
+          </div> --}}
+        </div>
       </main>
 
     </div>
